@@ -1,0 +1,25 @@
+{
+    "name": "crestron-vite-testing",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "archive": "ch5-cli archive -p crestron-vite-testing -d dist -o tsw",
+        "deploy": "ch5-cli deploy -H test-tsw1070 -p -t touchscreen tsw/crestron-vite-testing.ch5z",
+        "onestep": "npm run build && npm run archive && npm run deploy"
+    },
+    "dependencies": {
+        "@crestron/ch5-crcomlib": "^2.2.0",
+        "eruda": "^2.11.3",
+        "pinia": "^2.0.32",
+        "vue": "^3.2.47",
+        "vue-router": "^4.1.6"
+    },
+    "devDependencies": {
+        "@crestron/ch5-utilities-cli": "^2.0.0",
+        "@vitejs/plugin-vue": "^4.0.0",
+        "vite": "^4.1.3"
+    }
+}
